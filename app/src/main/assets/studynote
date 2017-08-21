@@ -1,0 +1,62 @@
+记录ghost开源项目涉及到的知识点；
+1.include  merge   ViewStub（已整理）
+2.四大组件 （已整理）
+3.OOM，没存溢出与泄露（已整理）
+4.屏幕适配（1）
+5.数据库知识（已整理）
+6.View绘制流程及opengl简单了解（已整理）：将父布局的MeasureSpec 传递给子布局，和字布局的layoutparams 共同计算出子布局的measureSpec ,在重新计算自己；
+计算完成后，进行onlayout,确定控件的位置；最后进行ondraw;
+7.ui事件传递，事件分发(已整理)
+8.熟悉线程进程 线程同步；线程/进程管理；handle  message  looper  (）
+UI线程  looper   messagequeue      在主线程创建handle   会持有 当前looper 线程的引用 ，把Message 加入到messagequeue  ;主线程经过轮询（如果没消息，则陷入到阻塞中；如遇消费者，生成
+者模式；）接收，取出Message (message中持有发送消息的handle引用；)对消息进行处理，回调handle的handle      message方法  ；;
+9.高级自定义view
+view的基本参数  view的滑动冲突   view的弹性滑动   事件分发 绘制（measure  layout  drawable）
+自定义view  集成view   viewgroup   具体的控件  具体的viewgroup
+10.高级动画  动画分成三种：view动画（也称补间动画）帧动画 属性动画     view动画主要是 平移  缩放 透明度 旋转   帧动画  加载一组图片  animation-list  标签
+layoutAnimation 主要是针对 viewgroup的  给加载的自view添加动画
+属性动画 可以针对任意对象的属性改变    位置 值  颜色 背景     objectAnimation  valueanimation anmationset
+valueanimation  只是针对属性值的改变  比如 背景色  对象的属性值
+objectAnimation  可以实现补间动画的所有功能   ；还提供了组合类   和监听类
+估值器和插值器   :插值器是定义变化节奏  ps:先快后慢  先慢后快   慢快慢  。。。
+估值器  是听过数值计算变化值并返回 是动画持续执行
+
+11.mvp  retrofit  rxjava  网络请求框架
+
+
+
+12.熟悉基本堆栈方法去结构
+
+13.各种常用布局用法总结
+14.面向接口编程深入了解
+15.一个月后进入高级，开始学习mysql  js  html  css  ssh  ssm  hdoop  分布式和集群
+16.最终决定 方向是 高级安卓（应用级别，对Java了解深入，）光面（Java web ）
+17.图像处理，视频处理，编辑
+18.布局
+
+
+
+19.android的签名机制；打包机制（多渠道打包，打包流程等等），
+20.apk安装文件压缩（压缩图片，代码压缩，.so文件压缩等等） webview相关知识点（与Native的交互，性能优化等）
+21.AIDL与messager的简单实用
+
+
+高级：
+了解内存管理，任务管理机制
+手动编写框架，设计模式，代码规范，项目进度，时间估算，启动流程，性能优化，JNI，脚本开发，activity启动流程，android中的IPC机制（Binder原理）
+专家：
+比如对android的对媒体模块十分熟悉，阅读过android多媒体模块的源码，能够更改其中的不足与BUG
+
+  滑动冲突  ipc   架构设计  源码阅读  AMS
+
+AIDL、Messenger、Binder、多进程、、滑动冲突、消息队列等
+
+- 基本知识点的细节
+1. Activity的启动模式以及异常情况下不同Activity的表现
+2. Service的onBind和onReBind的关联
+3. onServiceDisconnected(ComponentName className)和binderDied()的区别
+4. AsyncTask在不同版本上的表现细节
+5. 线程池的细节和参数配置
+6. …
+- 熟悉设计模式，有架构意识
+《Android开发艺术探索》、《Android 源码设计模式解析与实战》、《Android内核剖析》
