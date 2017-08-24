@@ -30,4 +30,9 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:21.0.+'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    //富文本编辑器
+    compile 'com.huangdali:mricheditor:1.0.1'
+    compile 'com.huangdali:myhttputils:2.0.2'
+    //加载网络请求
+    compile 'com.zhy:okhttputils:2.0.2'
 }

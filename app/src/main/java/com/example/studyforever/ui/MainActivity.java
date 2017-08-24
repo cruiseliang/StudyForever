@@ -19,6 +19,9 @@ import com.example.studyforever.anim.AnimationDemo;
 
 import java.util.ArrayList;
 
+/**
+ * http://blog.csdn.net/qq137722697/article/details/52705610  文章地址
+ */
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mActivityList.add(new AnimationDemo());
         mActivityList.add(new AnimationDemo());
         mActivityList.add(new SmileViewActivity());
+        mActivityList.add(new MRichTextActivity());
     }
 
     //初始化view
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         datas.add("retrofit//封装各种adapter");
         datas.add("animation");
         datas.add("smileview/笑脸评价");
+        datas.add("富文本编辑器");
         mAdapter = new MyAdapter(datas);
         mRecyclerView.setAdapter(mAdapter);
 //        mRecyclerView.addItemDecoration(new DividerItemDecoration(

@@ -23,16 +23,15 @@ objectAnimation  可以实现补间动画的所有功能   ；还提供了组合
 
 11.mvp  retrofit  rxjava  网络请求框架
 
-
-
 12.熟悉基本堆栈方法去结构
 
 13.各种常用布局用法总结
-14.面向接口编程深入了解
+
 15.一个月后进入高级，开始学习mysql  js  html  css  ssh  ssm  hdoop  分布式和集群
 16.最终决定 方向是 高级安卓（应用级别，对Java了解深入，）光面（Java web ）
-17.图像处理，视频处理，编辑
-18.布局
+android 进阶方向 ：音视频/图片 底层开发   react native   Java  web  服务器配置   运维工程师  测试工程师
+
+
 
 
 
@@ -49,7 +48,7 @@ objectAnimation  可以实现补间动画的所有功能   ；还提供了组合
 
   滑动冲突  ipc   架构设计  源码阅读  AMS
 
-AIDL、Messenger、Binder、多进程、、滑动冲突、消息队列等
+AIDL、Messenger、Binder、多进程、消息队列等
 
 - 基本知识点的细节
 1. Activity的启动模式以及异常情况下不同Activity的表现
@@ -59,4 +58,5 @@ AIDL、Messenger、Binder、多进程、、滑动冲突、消息队列等
 5. 线程池的细节和参数配置
 6. …
 - 熟悉设计模式，有架构意识
-《Android开发艺术探索》、《Android 源码设计模式解析与实战》、《Android内核剖析》
+《Android开发艺术探索》、《Android群英传》 、《Android 源码设计模式解析与实战》、《Android内核剖析》
+设计模式   英文文档  java web
