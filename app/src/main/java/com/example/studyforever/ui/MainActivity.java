@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mActivityList.add(new AnimationDemo());
         mActivityList.add(new SmileViewActivity());
         mActivityList.add(new MRichTextActivity());
+        mActivityList.add(new TestSurfaceView());
     }
 
     //初始化view
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         datas.add("animation");
         datas.add("smileview/笑脸评价");
         datas.add("富文本编辑器");
+        datas.add("surfaceView");
         mAdapter = new MyAdapter(datas);
         mRecyclerView.setAdapter(mAdapter);
 //        mRecyclerView.addItemDecoration(new DividerItemDecoration(
