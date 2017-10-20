@@ -25,6 +25,8 @@
         <activity android:name=".ui.SmileViewActivity" />
         <activity android:name=".ui.MRichTextActivity" />
         <activity android:name=".ui.TestSurfaceView"/>
+        <activity android:name=".ui.DeviceInfoActivity"/>
+        <activity android:name=".ui.ListViewActivity"/>
     </application>
 
 </manifest>

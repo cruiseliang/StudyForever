@@ -1,0 +1,22 @@
+1.android开发艺术探索  温习
+2.android群英传 温习
+3.Javaweb开发实战 温习
+4.volley源码解析
+5.将volley源码解析写成博客
+6.okhttp解析
+7.用rxJava retrofit mvp搭建框架 （包含最常见的功能，工具类 ，解析  网络请求 ，加载对话框 ，下拉刷新，上拉加载，轮播，侧滑，tab切换，轮播联动；）
+8.新书阅读 ，重叠部分跳过 ；增强对源码的理解
+9，Javaweb oa项目完全解析；ssh框架进一步熟悉
+10查看ssm框架，并查找项目 写移动端接口
+11.数据库书籍查看 优化建表 liunx学习 shell
+
+
+retrofit2  进行网络请求  get  post  多参数  单文件  多文件（不适合）
+
+设计模式
+rxjava1  rxjava2
+retrofit
+rxbinding
+rxcache
+rxbus
+

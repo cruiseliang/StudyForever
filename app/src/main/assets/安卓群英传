@@ -1,0 +1,8 @@
+主要是记录安卓群英传学习
+1.安卓基本结构分为四层 application framework  libraries和android runtime (程序库和虚拟机)  liunx内核
+  每一个 Android应用程序都在它自己的进程中运行，都拥有一个独立的Dalvik虚拟机实例。  Dalvik被设计成一个设备可以同时高效地运行多个虚拟系统
+application主要是应用开发和ndk开发的app   关于 context 的使用：application context 和activity  当UI相关时候都是使用activity作为context 当别的时候Service,Activity,Application等实
+例都可以，注意内存泄漏
+2.adb 的使用 先配置环境变量，可以直接进行adb shell命令  进入adb     然后通过 ll 展示相关文件夹   获取版本 等等命令都可以使用
+3.view的测量，定位，绘制；滑动冲突解决；事件分发机制，自定义view
+4.listview 优化：

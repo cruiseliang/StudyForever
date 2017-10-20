@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -16,6 +17,7 @@ import android.view.SurfaceView;
 
 public class TestSurfaceView extends Activity {
     /** Called when the activity is first created. */
+    int  index=0;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +68,7 @@ public class TestSurfaceView extends Activity {
             canvas.drawCircle(x, y, 10, paint);
 
             holder.unlockCanvasAndPost(canvas);
+            Log.e("dddd",index+"onDraw");
         }
         private void paint(Paint paint) {
             Canvas canvas=holder.lockCanvas();
@@ -75,6 +78,7 @@ public class TestSurfaceView extends Activity {
             canvas.drawCircle(x, y, 10, paint);
 
             holder.unlockCanvasAndPost(canvas);
+            Log.e("dddd",index+"paint");
         }
 
         boolean isRunning=true;
