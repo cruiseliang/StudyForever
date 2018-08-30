@@ -7,6 +7,6 @@
     <com.example.studyforever.widget.MyListView
         android:id="@+id/lv_test"
         android:layout_width="match_parent"
-        android:dividerHeight="2dp"
-        android:layout_height="match_parent"></com.example.studyforever.widget.MyListView>
+        android:layout_height="match_parent"
+        android:dividerHeight="2dp"></com.example.studyforever.widget.MyListView>
 </LinearLayout>

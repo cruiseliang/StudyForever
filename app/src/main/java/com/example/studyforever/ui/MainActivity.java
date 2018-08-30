@@ -1,6 +1,5 @@
 package com.example.studyforever.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,25 +8,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
+import com.example.studyforever.DividerItemDecoration;
 import com.example.studyforever.MyAdapter;
 import com.example.studyforever.R;
 import com.example.studyforever.anim.AnimationDemo;
+import com.example.studyforever.bean.IndexMsgBean;
 
 import java.util.ArrayList;
 
 /**
- * http://blog.csdn.net/qq137722697/article/details/52705610  文章地址
+ * 学习过程中的积累
+ * https://github.com/shixinzhang/LearnAndroid
+ * https://github.com/crazyqiang/AndroidStudy
  */
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
     private MyAdapter mAdapter;
-    private ArrayList<String> datas = new ArrayList<>();
-    private ArrayList<Activity> mActivityList = new ArrayList<>();
+    private ArrayList<IndexMsgBean> datas ;
+
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -44,14 +46,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
     private void initData() {
-        mActivityList.add(new AnimationDemo());
-        mActivityList.add(new AnimationDemo());
-        mActivityList.add(new SmileViewActivity());
-        mActivityList.add(new MRichTextActivity());
-        mActivityList.add(new TestSurfaceView());
-        mActivityList.add(new DeviceInfoActivity());
-        mActivityList.add(new ListViewActivity());
+        datas = new ArrayList<>();
+        datas.add(new IndexMsgBean("retrofit//封装各种adapter",new AnimationDemo()));
+        datas.add(new IndexMsgBean("animation",new AnimationDemo()));
+        datas.add(new IndexMsgBean("smileview/笑脸评价",new SmileViewActivity()));
+        datas.add(new IndexMsgBean("富文本编辑器",new MRichTextActivity()));
+        datas.add(new IndexMsgBean("surfaceView",new TestSurfaceView()));
+        datas.add(new IndexMsgBean("设备信息",new DeviceInfoActivity()));
+        datas.add(new IndexMsgBean("listview",new ListViewActivity()));
+        datas.add(new IndexMsgBean("弹窗",new PopupActivity()));
     }
 
     //初始化view
@@ -65,26 +74,14 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setHasFixedSize(true);
         //创建并设置Adapter
-        datas.add("retrofit//封装各种adapter");
-        datas.add("animation");
-        datas.add("smileview/笑脸评价");
-        datas.add("富文本编辑器");
-        datas.add("surfaceView");
-        datas.add("设备信息");
-        datas.add("listview");
-
         mAdapter = new MyAdapter(datas);
         mRecyclerView.setAdapter(mAdapter);
-//        mRecyclerView.addItemDecoration(new DividerItemDecoration(
-//                this, DividerItemDecoration.HORIZONTAL_LIST));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(
+                this, DividerItemDecoration.HORIZONTAL_LIST));
         mAdapter.setOnItemClickListener(new MyAdapter.OnRecyclerViewItemClickListener() {
             @Override
-            public void onItemClick(View view, String data,int position) {
-                //
-                Log.e("datass", data);
-                Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
-                Activity activity=mActivityList.get(position);
-                startActivity(new Intent(MainActivity.this, activity.getClass()));
+            public void onItemClick(View view, IndexMsgBean data,int position) {
+                startActivity(new Intent(MainActivity.this, data.getActivity().getClass()));
             }
         });
 //        startActivity(new Intent(MainActivity.this, AnimationDemo.class));
@@ -92,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
 //            @Override
 //            public void convert(BaseViewHolder holder, String s) {
 //                holder.setText(R.id.tv_item_demo, s);
-//
 //            }
 //        });
     }

@@ -19,6 +19,8 @@ import java.util.ArrayList;
 public class ListViewActivity extends Activity {
     private ListView mListView;
     private LvTestAdapter mAdapter;
+    //privare listview
+
     private ArrayList<String> mList = new ArrayList<>();
 
     @Override

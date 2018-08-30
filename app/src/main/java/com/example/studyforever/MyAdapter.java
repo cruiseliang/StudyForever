@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.studyforever.bean.IndexMsgBean;
+
 import java.util.ArrayList;
 
 /**
@@ -13,7 +15,7 @@ import java.util.ArrayList;
  */
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implements View.OnClickListener {
-    public ArrayList<String> datas = null;
+    public ArrayList<IndexMsgBean> datas = null;
     private  int pos;
     public MyAdapter(ArrayList datas) {
         this.datas = datas;
@@ -31,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implem
     //将数据与界面进行绑定的操作
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.mTextView.setText(datas.get(position));
+        viewHolder.mTextView.setText(datas.get(position).getName());
         // 如果设置了回调，则设置点击事件
         //将数据保存在itemView的Tag中，以便点击时进行获取
         viewHolder.itemView.setTag(datas.get(position));
@@ -47,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implem
     public void onClick(View view) {
         if (mOnItemClickListener != null) {
             //注意这里使用getTag方法获取数据
-            mOnItemClickListener.onItemClick(view,(String)view.getTag(),pos);
+            mOnItemClickListener.onItemClick(view,(IndexMsgBean) view.getTag(),pos);
         }
     }
 
@@ -61,7 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implem
     }
 
     public  interface OnRecyclerViewItemClickListener {
-        void onItemClick(View view , String data,int position);
+        void onItemClick(View view , IndexMsgBean data,int position);
     }
 
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
@@ -69,7 +71,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implem
         this.mOnItemClickListener = listener;
     }
 
-    public void addItem(String content, int position) {
+    public void addItem(IndexMsgBean content, int position) {
         datas.add(position, content);
         notifyItemInserted(position); //Attention!
     }
