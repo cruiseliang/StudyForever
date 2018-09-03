@@ -13,4 +13,5 @@
     <color name="black_deep">#FF000000</color>
     <color name="white">#ffffff</color>
     <color name="bbbbbb_2.3">#bbbbbb</color>
+    <item name="gray_holo_light" type="color">#ffd0d0d0</item>
 </resources>

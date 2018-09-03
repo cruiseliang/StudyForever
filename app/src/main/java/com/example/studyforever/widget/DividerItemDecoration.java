@@ -1,4 +1,4 @@
-package com.example.studyforever;
+package com.example.studyforever.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

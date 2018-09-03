@@ -26,6 +26,7 @@ public class CustomPopupWindow implements PopupWindow.OnDismissListener {
     private Context mContext;
     private Activity mActivity;
     private  int  contentviewHeight;
+    private  int  contentviewWidth;
 
     public CustomPopupWindow(Builder builder) {
         mContext = builder.context;
@@ -52,10 +53,14 @@ public class CustomPopupWindow implements PopupWindow.OnDismissListener {
         mPopupWindow.setOnDismissListener(this);
         mPopupWindow.getContentView().measure(0, 0);
         contentviewHeight=contentview.getMeasuredHeight();
+        contentviewWidth=contentview.getMeasuredWidth();
     }
 
     public int getHeight() {
         return contentviewHeight;
+    }
+    public int getWidth() {
+        return contentviewWidth;
     }
     /**
      * popup 消失

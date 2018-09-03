@@ -28,11 +28,25 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:recyclerview-v7:21.0.+'
-    compile 'com.squareup.retrofit2:retrofit:2.0.2'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
     //富文本编辑器
     compile 'com.huangdali:mricheditor:1.0.1'
     compile 'com.huangdali:myhttputils:2.0.2'
     //加载网络请求
     compile 'com.zhy:okhttputils:2.0.2'
+    implementation files('libs/volley.jar')
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'io.reactivex.rxjava2:rxjava:2.1.3'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+//dagger:2
+    compile 'com.google.dagger:dagger:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
 }

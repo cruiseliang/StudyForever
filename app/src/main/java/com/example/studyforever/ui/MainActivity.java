@@ -11,11 +11,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.example.studyforever.DividerItemDecoration;
-import com.example.studyforever.MyAdapter;
+import com.example.studyforever.widget.DividerItemDecoration;
+import com.example.studyforever.adapter.MyAdapter;
 import com.example.studyforever.R;
 import com.example.studyforever.anim.AnimationDemo;
 import com.example.studyforever.bean.IndexMsgBean;
+import com.example.studyforever.network.okhttp.OkhttpActivity;
+import com.example.studyforever.network.retrofit.RetrofitActivity;
 
 import java.util.ArrayList;
 
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         datas = new ArrayList<>();
-        datas.add(new IndexMsgBean("retrofit//封装各种adapter",new AnimationDemo()));
+        datas.add(new IndexMsgBean("retrofit//封装各种adapter",new RetrofitActivity()));
         datas.add(new IndexMsgBean("animation",new AnimationDemo()));
         datas.add(new IndexMsgBean("smileview/笑脸评价",new SmileViewActivity()));
         datas.add(new IndexMsgBean("富文本编辑器",new MRichTextActivity()));
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         datas.add(new IndexMsgBean("设备信息",new DeviceInfoActivity()));
         datas.add(new IndexMsgBean("listview",new ListViewActivity()));
         datas.add(new IndexMsgBean("弹窗",new PopupActivity()));
+        datas.add(new IndexMsgBean("volley",new VolleyStudy()));
+        datas.add(new IndexMsgBean("okhttp",new OkhttpActivity()));
     }
 
     //初始化view
@@ -92,5 +96,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
     }
+
 
 }
